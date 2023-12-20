@@ -1,15 +1,14 @@
 import type { UnpluginFactory } from 'unplugin'
 import { createUnplugin } from 'unplugin'
 import type { Options } from './types'
+import { transform } from './core/transform'
 
-export const unpluginFactory: UnpluginFactory<Options | undefined> = options => ({
+export const unpluginFactory: UnpluginFactory<Options | undefined> = () => ({
   name: 'unplugin-starter',
   transformInclude(id) {
-    return id.endsWith('main.ts')
+    return id.endsWith('?lottie')
   },
-  transform(code) {
-    return code.replace('__UNPLUGIN__', `Hello Unplugin! ${options}`)
-  },
+  transform: transform,
 })
 
 export const unplugin = /* #__PURE__ */ createUnplugin(unpluginFactory)
