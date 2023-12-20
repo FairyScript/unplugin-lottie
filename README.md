@@ -2,22 +2,7 @@
 
 [![NPM version](https://img.shields.io/npm/v/unplugin-lottie?color=a1b858&label=)](https://www.npmjs.com/package/unplugin-lottie)
 
-UnpluginLottie template for [unplugin](https://github.com/unjs/unplugin).
-
-## Template Usage
-
-To use this template, clone it down using:
-
-```bash
-npx degit unplugin/unplugin-lottie my-unplugin
-```
-
-And do a global replacement of `unplugin-lottie` with your plugin name.
-
-Then you can start developing your unplugin 🔥
-
-To test your plugin, run: `pnpm run dev`
-To release a new version, run: `pnpm run release`
+Lottie Plugin for [unplugin](https://github.com/unjs/unplugin).
 
 ## Install
 
@@ -34,7 +19,9 @@ import UnpluginLottie from 'unplugin-lottie/vite'
 
 export default defineConfig({
   plugins: [
-    UnpluginLottie({ /* options */ }),
+    UnpluginLottie({
+      /* options */
+    }),
   ],
 })
 ```
@@ -52,13 +39,14 @@ import UnpluginLottie from 'unplugin-lottie/rollup'
 
 export default {
   plugins: [
-    UnpluginLottie({ /* options */ }),
+    UnpluginLottie({
+      /* options */
+    }),
   ],
 }
 ```
 
 <br></details>
-
 
 <details>
 <summary>Webpack</summary><br>
@@ -68,8 +56,10 @@ export default {
 module.exports = {
   /* ... */
   plugins: [
-    require('unplugin-lottie/webpack')({ /* options */ })
-  ]
+    require('unplugin-lottie/webpack')({
+      /* options */
+    }),
+  ],
 }
 ```
 
@@ -82,7 +72,12 @@ module.exports = {
 // nuxt.config.js
 export default defineNuxtConfig({
   modules: [
-    ['unplugin-lottie/nuxt', { /* options */ }],
+    [
+      'unplugin-lottie/nuxt',
+      {
+        /* options */
+      },
+    ],
   ],
 })
 ```
@@ -99,7 +94,9 @@ export default defineNuxtConfig({
 module.exports = {
   configureWebpack: {
     plugins: [
-      require('unplugin-lottie/webpack')({ /* options */ }),
+      require('unplugin-lottie/webpack')({
+        /* options */
+      }),
     ],
   },
 }
