@@ -4,6 +4,10 @@
   "version": "1.0.0",
   "packageManager": "pnpm@8.6.12",
   "description": "",
+  "author": {
+    "name": "FairyScript",
+    "email": "h@queb.fun"
+  },
   "license": "MIT",
   "homepage": "https://github.com/FairyScript/unplugin-lottie#readme",
   "repository": {
