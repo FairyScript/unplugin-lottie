@@ -4,6 +4,47 @@
 
 Lottie Plugin for [unplugin](https://github.com/unjs/unplugin).
 
+## Bundler Support
+
+| Name    | Status                                                         |
+| ------- | -------------------------------------------------------------- |
+| Vite    | ![Vite](https://img.shields.io/badge/-Supported-brightgreen)   |
+| Rollup  | ![Rollup](https://img.shields.io/badge/-Supported-brightgreen) |
+| Webpack | ![Webpack](https://img.shields.io/badge/-Untested-blue)        |
+| Nuxt    | ![Nuxt](https://img.shields.io/badge/-Untested-blue)           |
+| Vue CLI | ![Vue CLI](https://img.shields.io/badge/-Untested-blue)        |
+| esbuild | ![esbuild](https://img.shields.io/badge/-Untested-blue)        |
+
+## Note
+
+This project assumes that all of your Lottie files are in the same directory.
+
+```
+.
+├── images
+│   ├── img0.png
+│   ├── img1.png
+│   ├── ...
+│   └── img5.png
+└── data.json
+```
+
+## Usage
+
+```ts
+// yourProjectFile.ts
+import lottieFile from 'assets/your-lottie-file/data.json?lottie'
+import lottie from 'lottie-web'
+
+lottie.loadAnimation({
+  container: element, // the dom element that will contain the animation
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  animationData: lottieFile, // the animation json object
+})
+```
+
 ## Install
 
 ```bash
