@@ -7,7 +7,7 @@ export function transform(code: string) {
   const tcode = code.replaceAll(regex, (_: string, u: string, p: string) => {
     const asset = './' + join(u, p).replaceAll('\\', '/')
     const name = p.replace('.', '')
-    imports += `import ${name} from '${asset}';\n`
+    imports += `import ${name} from '${asset}?import';\n`
 
     return `u:"",p:${name}`
   })
