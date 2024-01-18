@@ -6,6 +6,8 @@ export default <Options>{
   ],
   clean: true,
   format: ['cjs', 'esm'],
-  dts: true,
+  dts: {
+    footer:"declare module '*.json?lottie'",
+  },
   onSuccess: 'npm run build:fix',
 }
